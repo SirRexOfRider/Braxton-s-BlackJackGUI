@@ -287,6 +287,10 @@ class BlackjackGUI:
      
     def set_standing(self, standing):
         self.__standing = standing
+
+    def __str__(self):
+        return "Black Jack Game Settings:\n\tStanding: " + str(self.get_standing()) + "\n\tCan reset?: " + str(self.get_can_reset())
+        
         
         
 
