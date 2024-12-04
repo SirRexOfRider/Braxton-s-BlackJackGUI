@@ -2,6 +2,7 @@ from Deck import Deck
 from Player import Player
 from tkinter import *
 from functools import partial
+import pygame
 
 class BlackjackGUI:
     
@@ -11,6 +12,7 @@ class BlackjackGUI:
     def __init__(self):
         self.set_can_reset(False)
         self.set_standing(False)
+        self.init_music()
         self.game_init()
 
 #--------------------------------------GAME-------------------------------------------------------------------------------------------------------------------------
@@ -122,6 +124,14 @@ class BlackjackGUI:
         player.add_cards(deck.deal())
         
         player.calculate_score()
+    
+    def init_music(self):
+        #Add music
+        theme = 'audio/rock_this_town.mp3'
+        pygame.mixer.init()
+        pygame.mixer.music.load(theme)
+        pygame.mixer.music.play()
+
 
 
     #Determine if the game is over and return a value that describes what happened
