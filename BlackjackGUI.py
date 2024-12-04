@@ -181,8 +181,10 @@ class BlackjackGUI:
             temp = ""
 
             #Print ending hands
+            temp +="    DEALERS-HAND    \n"
             temp += str(dealer)
-            temp += str(player)
+            temp += "\n"
+            
             
             temp += "\t~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
             temp += "\t[               G A M E  O V E R ! ! !              ]\n"
@@ -190,21 +192,21 @@ class BlackjackGUI:
         
             #Determine what happened
             if (what_happened == 1):
-                temp += "\n\t\t\t| Dealer got 21! |\n"
+                temp += "\n\t\t| Dealer got 21! |\n"
             elif (what_happened == 2):
-                temp += "\n\t\t\t| Dealer busts! |\n"
+                temp += "\n\t\t| Dealer busts! |\n"
             elif (what_happened == 3):
-                temp += "\n\t\t\t| Player busts!  |\n"
+                temp += "\n\t\t| Player busts!  |\n"
             elif (what_happened == 4):
-                temp += "\n\t\t\t| Player got 21!  |\n"
+                temp += "\n\t\t| Player got 21!  |\n"
             elif (what_happened == 5):
-                temp+= "\n\t\t\t| Dealer scored higher than player! |\n"
+                temp+= "\n\t\t| Dealer scored higher than player! |\n"
             elif (what_happened== 6):
-                temp+= "\n\t\t\t| Dealer's score matched player's score! |"
+                temp+= "\n\t\t| Dealer's score matched player's score! |"
                 
             #Troubleshooting
             else:
-                temp +="\n\t\t\t| Game ended... somehow?? Good job Braxton!!! |"
+                temp +="\n\t\t| Game ended... somehow?? Good job Braxton!!! |"
                 
                 
             #Calculate how many wins the player and machine have        

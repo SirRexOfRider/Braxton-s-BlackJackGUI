@@ -2,7 +2,7 @@ BASIC FLOW:
 
         Player --|
                  V
-Card -> Deck -> Blackjack -> driver
+Card -> Deck -> BlackjackGUI -> driver
 
 DESC:
     Card:
@@ -21,7 +21,7 @@ DESC:
         Has another __str__ method to print out the dealer's hand for the beginning of the game
         Keeps track of current wins
 
-    Blackjack:
+    BlackjackGUI:
         Takes in Deck and Player
 
         This has the main game loop and game logic:
@@ -34,18 +34,17 @@ DESC:
         The player is the current player and dealer is the dealer/machine (again, duh)
         The player gets to either hit or stand.
         At the end of the game, the player sees the current wins between themselves and the dealer. They get to decide to play again after game_end()
+
+        This also has GUI elements as well as music!
     
     driver:
         Takes in Blackjack
         Runs the game
         Have fun :D
 
-    Most classes have DA, __init__(), helpers, getters, setters, __str__() with a few exceptions:
+    Most classes have DA, __init__(), helpers, getters, setters, __str__() with the exception that:
         
         Blackjack doesn't take anything in it's init because it would just break the game. Might as well just set the DA myself.
-
-        Player has a specialized dealer_str() that only prints out what the dealer would show in the beginning in Blackjack
-
 
     But otherwise, I think everything else runs smoothly!
     
