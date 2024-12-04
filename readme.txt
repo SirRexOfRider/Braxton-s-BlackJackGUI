@@ -32,7 +32,7 @@ DESC:
         game_end() takes in the is_game_over()'s flag to determine to keep going or end the game based off the flag.
         
         The player is the current player and dealer is the dealer/machine (again, duh)
-        The player gets to either hit, stand, or splitting (Still figuring out splitting)
+        The player gets to either hit or stand.
         At the end of the game, the player sees the current wins between themselves and the dealer. They get to decide to play again after game_end()
     
     driver:
@@ -40,21 +40,16 @@ DESC:
         Runs the game
         Have fun :D
 
-    Most classes have DA, __init__(), getters, setters, __str__() with a few exceptions:
-        Blackjack doesn't currently have a __str__() because I'm not sure what it would return
-        Blackjack also doesn't take anything in it's init because it would just break the game. Might as well just set the DA myself.
+    Most classes have DA, __init__(), helpers, getters, setters, __str__() with a few exceptions:
+        
+        Blackjack doesn't take anything in it's init because it would just break the game. Might as well just set the DA myself.
 
         Player has a specialized dealer_str() that only prints out what the dealer would show in the beginning in Blackjack
 
-        Deck has a constant LIST_OF_TYPES[] list to help calculate splitting later in Blackjack
-        But suites don't, which looks weird but I also don't need it for suites soooo   _         _ 
-                                                                                         \-(| |)-/
-                                                                                             w
 
-    
     But otherwise, I think everything else runs smoothly!
     
-    Just need to do GUI for it and figure out splitting
+ 
 
 
     
