@@ -8,8 +8,8 @@ class Deck:
     #DA
     __deck = []
     
-    #This is a special tool that will help us later :)
-    #Which is why the suites don't also have/need it
+    #This was going to help with spliting, but that idea was scrapped
+    #This isn't needed, but is just another way to determine the type of cards
     __LIST_OF_TYPES = ["Ace","Jack","Queen","King"]
     
         
