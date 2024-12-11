@@ -1,7 +1,7 @@
 BASIC FLOW:
 
-        Player --|
-                 V
+                Player --|
+                         V
 Card -> Deck -> BlackjackGUI -> driver
 
 DESC:
