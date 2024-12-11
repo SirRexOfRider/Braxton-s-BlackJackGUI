@@ -71,7 +71,7 @@ class Blackjack_GUI:
     def game(self, top, dealer, player, deck): 
         #Start game and check for immediate win
         self.game_start(dealer, player, deck)
-        self.game_end(self.is_game_over(dealer, player),top, dealer, player, deck)
+        self.game_end(self.is_game_over(dealer, player),top, dealer, player)
         
         #Set top's children to be object that can be modifed
         #I don't need to do this, but it just makes it a little clearer on what I'm doing
@@ -172,7 +172,7 @@ class Blackjack_GUI:
         return what_happened
           
 
-    def game_end(self, what_happened, top, dealer, player, deck):
+    def game_end(self, what_happened, top, dealer, player):
         
         #If the game did actually end
         if (what_happened != 0):
@@ -227,7 +227,7 @@ class Blackjack_GUI:
             
             top.children['!text'].delete('1.0', END)
             top.children['!text'].insert('1.0',player)
-            self.game_end(self.is_game_over(dealer,player),top, dealer, player, deck)
+            self.game_end(self.is_game_over(dealer,player),top, dealer, player)
             
         else:
             top.children['!text3'].delete('1.0',END)
@@ -238,7 +238,7 @@ class Blackjack_GUI:
         
         if self.get_can_reset() != True:  
             self.set_standing(True)
-            self.game_end(self.dealer_turn(top, dealer, player, deck), top, dealer, player, deck)
+            self.game_end(self.dealer_turn(top, dealer, player, deck), top, dealer, player)
         else:
             top.children['!text3'].delete('1.0',END)
             top.children['!text3'].insert("1.0", "Don't break my game!, reset!!!")
